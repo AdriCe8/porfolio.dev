@@ -1,0 +1,72 @@
+---
+import Java from "./icons/Java.astro";
+import MySql from "./icons/MySql.astro";
+import Spring from "./icons/Spring.astro";
+import Postman from "./icons/Post.astro";
+
+const TAGS = {
+  JAVA: {
+    name: "Java",
+    class: "bg-white/5 hover:scale-100 hover:bg-white/10 transition text-white ",
+    icon: Java
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-white/5 hover:scale-100 hover:bg-white/10 transition text-white",
+    icon: MySql
+  },
+  SPRING:{
+    name:"Spring",
+    class: "bg-white/5 hover:scale-100 hover:bg-white/10 transition text-white",
+    icon: Spring,
+  },
+  POSTMAN:{
+    name:"Postman",
+    class:"bg-white/5 hover:scale-100 hover:bg-white/10 transition text-white",
+    icon: Postman,
+
+  }
+};
+
+const PROJECTS = [
+  {
+    title:
+      "Proyecto de Concesionario de Coches - CRUD con Java Swing, JPA y MySQL",
+    description:
+      "Aplicación de escritorio para gestionar un concesionario con operaciones CRUD. Desarrollada con Java Swing, siguiendo el patrón MVC, y conectada a una base de datos MySQL mediante JPA para una gestión eficiente de los datos.",
+    link: "https://github.com/AdriCe8/Concesionario",
+    image: "/Image/svgConse.webp",
+    tags: [TAGS.JAVA, TAGS.MYSQL],
+  },
+  {
+    title:
+    "API de Gestión de Cursos 🎓",
+    description:"La API de Gestión de Cursos es un proyecto que permite a los estudiantes gestionar su aprendizaje mediante la creación, modificación y consulta de cursos y temas. Incluye funcionalidades para añadir cursos con detalles como nombre y fecha de finalización, gestionar temas vinculados a cursos específicos y realizar consultas avanzadas filtrando por palabras clave. Desarrollada con Spring Framework y probada con Postman, esta API demuestra habilidades en el desarrollo de aplicaciones robustas y eficientes, y está disponible en GitHub.",
+    link:"https://github.com/AdriCe8/ApiCursos",
+    image:"/Image/api.webp",
+    tags: [TAGS.JAVA, TAGS.MYSQL, TAGS.SPRING, TAGS.POSTMAN]
+  }
+];
+---
+
+{PROJECTS.map(({ image, title, description, tags }) => (
+  <article class="mb-10">
+    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+    <p class="text-lg mb-4 text-pretty">{description}</p>
+    <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+      <li>
+        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-3 px-3`}>
+        <tag.icon class="size-4"/>
+        {tag.name}
+        </span>
+          </li>
+        ))}
+    </ul>
+    <img
+      class="rounded shadow-2xl shadow-white/10"
+      src={image}
+      alt={`Captura de pantalla del proyecto ${image}`}
+    />
+  </article>
+))}

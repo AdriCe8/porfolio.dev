@@ -1,0 +1,41 @@
+---
+// Tecnologias.astro
+import Java from "./icons/Java.astro";
+import MySql from "./icons/MySql.astro";
+import Spring from "./icons/Spring.astro";
+import Postman from "./icons/Post.astro";
+
+const tecnologiasData = [
+  {
+    title: "Java",
+    logo: Java, // Componente
+  },
+  {
+    title: "MySQL",
+    logo: MySql, // Componente
+  },
+  {
+    title: "Spring",
+    logo: Spring, // Componente
+  },
+  {
+    title: "Postman",
+    logo: Postman, // Componente
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  {tecnologiasData.map(tecnologia => (
+    <a
+      href="#"
+      class="flex flex-col items-center justify-center block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+    >
+      {/* Renderizar el logo como un componente */}
+      <tecnologia.logo class="mb-4 w-16 h-16" />
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+        {tecnologia.title}
+      </h5>
+    </a>
+  ))}
+</div>
