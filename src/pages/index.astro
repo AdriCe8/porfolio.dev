@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Contacto from "../components/Contacto.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import SocialPill from "../components/SocialPill.astro";
@@ -18,7 +19,7 @@ import Tecnologias from "../components/Tecnologias.astro";
 
 <Layout
   title="Porfolio de Adri - Desarrollador Web y Programador Web"
-  description="Contrata a Adri para todo tipo de desarrollo"
+  description="Desarrollador Backend con experiencia en Java, Spring Boot y la creación de APIs RESTful. He trabajado integrando bases de datos MySQL, optimizando aplicaciones web y mejorando la experiencia del usuario con React y Laravel. Apasionado por resolver problemas complejos y mejorar el rendimiento del código, con conocimientos en Docker, Git y pruebas unitarias con JUnit."
 >
   <main class="px-4">
     <SectionContainer id="sobre-mi" class="py-44 pb-32">
@@ -30,7 +31,7 @@ import Tecnologias from "../components/Tecnologias.astro";
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hola! Soy Adri! <a
+        Hola, soy Adri! <a
           href="https://www.linkedin.com/in/adrian8cuenca/"
           target="_blank"
           rel="noopener"
@@ -39,14 +40,20 @@ import Tecnologias from "../components/Tecnologias.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        Desarrollador Backend con experiencia en Java, Spring Boot y la creación
-        de APIs RESTful. He trabajado integrando bases de datos MySQL,
-        optimizando aplicaciones web y mejorando la experiencia del usuario con
-        React y Laravel. Apasionado por resolver problemas complejos y mejorar
-        el rendimiento del código, con conocimientos en Docker, Git y pruebas
-        unitarias con JUnit.
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px] text-pretty">
+        Desarrollador Backend con experiencia en 
+        <span class="text-yellow-100">Java</span>, 
+        <span class="text-yellow-100">Spring Boot</span> y la creación de 
+        <span class="text-yellow-100">APIs RESTful</span>. He trabajado integrando 
+        bases de datos <span class="text-yellow-100">MySQL</span>, optimizando 
+        aplicaciones web y mejorando la experiencia del usuario con 
+        <span class="text-yellow-100">React</span> y <span class="text-yellow-100">Laravel</span>. 
+        Apasionado por resolver problemas complejos y mejorar el rendimiento del 
+        código, con conocimientos en <span class="text-yellow-100">Docker</span>, 
+        <span class="text-yellow-100">Git</span> y pruebas unitarias con 
+        <span class="text-yellow-100">JUnit</span>.
       </h2>
+      
 
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/adrian8cuenca/">
@@ -91,4 +98,14 @@ import Tecnologias from "../components/Tecnologias.astro";
       <Projects />
     </SectionContainer>
   </main>
+
+  <SectionContainer id="contacto">
+    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <Mail class="size-7" />
+      Contacto
+    </h2>
+    <Contacto/>
+
+
+  </SectionContainer>
 </Layout>
