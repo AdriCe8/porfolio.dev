@@ -15,6 +15,8 @@ import Projects from "../components/Projects.astro";
 import CV from "../components/icons/CV.astro";
 import Tec from "../components/icons/Tec.astro";
 import Tecnologias from "../components/Tecnologias.astro";
+import Profile from "../components/icons/Profile.astro";
+import Sobremi from "../components/Sobremi.astro";
 ---
 
 <Layout
@@ -22,7 +24,7 @@ import Tecnologias from "../components/Tecnologias.astro";
   description="Desarrollador Backend con experiencia en Java, Spring Boot y la creación de APIs RESTful. He trabajado integrando bases de datos MySQL, optimizando aplicaciones web y mejorando la experiencia del usuario con React y Laravel. Apasionado por resolver problemas complejos y mejorar el rendimiento del código, con conocimientos en Docker, Git y pruebas unitarias con JUnit."
 >
   <main class="px-4">
-    <SectionContainer id="sobre-mi" class="py-44 pb-32">
+    <SectionContainer  class="py-44 pb-32">
       <img
         class="rounded-full w-12 h-12 mb-4"
         src="/src/Imagens/fotoB.png"
@@ -97,15 +99,21 @@ import Tecnologias from "../components/Tecnologias.astro";
       </h2>
       <Projects />
     </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Profile class="size-9"/>
+        Sobre mí
+      </h2>
+      <Sobremi/>
+    </SectionContainer>
+    <SectionContainer id="contacto">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Mail class="size-6" />
+        Contacto
+      </h2>
+      <Contacto/>
+    </SectionContainer>
   </main>
 
-  <SectionContainer id="contacto">
-    <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-      <Mail class="size-7" />
-      Contacto
-    </h2>
-    <Contacto/>
-
-
-  </SectionContainer>
+ 
 </Layout>
