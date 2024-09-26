@@ -7,7 +7,7 @@ interface Props {
   description: string;
 }
 
-const { description,title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,33 +20,29 @@ const { description,title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    
-    
+  <body class="relative bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] min-h-screen">
     <Header />
     <slot />
-    <Footer/>
+    <Footer />
   </body>
 </html>
+
 <style is:global>
-  :root {
-    color-scheme: light dark;
-  }
+  /* Estilos globales */
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
-
   }
 
   body {
-    background: #050505;
+    color: #fff; /* Texto claro */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
 
-  @media(prefers-reduce-motion:reduce){
-    html{
+  @media (prefers-reduce-motion: reduce) {
+    html {
       scroll-behavior: auto;
     }
   }
